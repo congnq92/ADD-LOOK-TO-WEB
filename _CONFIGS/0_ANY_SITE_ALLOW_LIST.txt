@@ -1,0 +1,5 @@
+SITE DOMAIN DETECT | 1 SITE PER 1 LINE | START CALC FROM LINE 2ND
+stackoverflow
+stackexchange
+guru99
+php.net

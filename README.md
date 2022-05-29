@@ -1,0 +1,24 @@
+# ADD-LOOK-TO-WEB
+*USE CHROME INJECTOR*
+
+# [CHROME ADD-ON] [SCRIPTY - JAVASCRIPT INJECTOR](https://chrome.google.com/webstore/detail/scripty-javascript-inject/milkbiaeapddfnpenedfgbfdacpbcbam)
+- STEP 1: ADD ADD-ON TO CHROME
+- STEP 2: ADD WEBSITE DETECT
+- STEP 3: ADD JAVASCRIPT [FOR MODIFY SITE LOOK]
+  - **[INJECTION.JS - USE FOR ANY SITE](/[AUTO_GENERATED]_PRODUCTION_INJECTION/[AUTO_GENERATED]_CONG_JS_INJECTION.js)**
+- CONFIGS:
+  - *DETECT **``.`` | DOT** FOR ANY SITE LISTING.*
+  - *SET OPTION: **AUTOMATICALLY LOAD PAGE.***
+
+# **GITHUB RAW AS CDN**: https://gitcdn.link/
+
+# LIST WEBSITE 
+## [>>> SAMPLE DATA <<<](/JAVASCRIPT/CONG/SAMPLE_DATA.js)
+## *new site put in folder /JAVASCRIPT/**\<DOMAIN DETECT\>.js***
+
+# COMMAND TO BUILD PROJECT
+````bash
+php combine.php
+````
+
+# VERSION 2.X

@@ -1,0 +1,9 @@
+# THIS IS PHP MODULE
+— PROCESS TEXT<br>
+— PROCESS PROJECT VERSION<br>
+— PROCESS GIT<br>
+
+# COMMAND TO BUILD PROJECT
+````bash
+php combine.php
+````
