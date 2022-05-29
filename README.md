@@ -14,7 +14,7 @@
 
 # LIST WEBSITE 
 ## [>>> SAMPLE DATA <<<](/JAVASCRIPT/CONG/SAMPLE_DATA.js)
-## *new site put in folder /JAVASCRIPT/**\<DOMAIN DETECT\>.js***
+## *new site put in folder /JAVASCRIPT/SITE_DATA/**\<DOMAIN DETECT\>.js***
 
 # COMMAND TO BUILD PROJECT
 ````bash
