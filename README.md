@@ -22,3 +22,4 @@ php combine.php
 ````
 
 # VERSION 2.X
+- REQUIRED: ``PHP 8.X``
