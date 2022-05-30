@@ -54,14 +54,14 @@ class TEXT_PROCESS extends BASE
     {
         $TEXT_JS_SITE_DATA_ALL = "// PART: SITE DATA | START\n";
         //
-        $TEXT_JS_SITE_DATA_ALL .= "let URL = window.location.href;\n";
+        $TEXT_JS_SITE_DATA_ALL .= "let URL_1 = window.location.href;\n";
         $TEXT_JS_SITE_DATA_ALL .= "let DATA = [];\n";
         $LIST_SITE_DATA_FILE_NAMES = $this->LIST_FILES_IN_FOLDER(PATH_FOLDER_JAVASCRIPT_SITE_DATA);
         array_shift($LIST_SITE_DATA_FILE_NAMES); // REMOVE ANY SITE ITEM | 1ST
         // CASE: DOMAIN DETECT
         foreach ($LIST_SITE_DATA_FILE_NAMES as $SITE_DATA_FILE_NAME) {
             $SITE_DATA_DOMAIN_DETECT = str_replace(".js", "", $SITE_DATA_FILE_NAME);
-            $TEXT_JS_SITE_DATA_ALL .= "if(URL.includes('$SITE_DATA_DOMAIN_DETECT'))";
+            $TEXT_JS_SITE_DATA_ALL .= "if(URL_1.includes('$SITE_DATA_DOMAIN_DETECT'))";
             // let DATA = [...]
             $SITE_DATA_TEXT_JS = $this->READ_FILE(sprintf("%s/%s", PATH_FOLDER_JAVASCRIPT_SITE_DATA, $SITE_DATA_FILE_NAME));
             $TEXT_CONSOLE_LOG = sprintf("console.log('SITE=%s | DATA=%s');", $SITE_DATA_DOMAIN_DETECT, $SITE_DATA_FILE_NAME);
@@ -72,8 +72,8 @@ class TEXT_PROCESS extends BASE
         $ANY_SITE_ALLOW_LIST = $this->READ_CONFIGS_ANY_SITE_ALLOW_LIST();
         for ($INDEX = 0; $INDEX < count($ANY_SITE_ALLOW_LIST); $INDEX++) {
             $TEXT_JS_SITE_DATA_ALL .= $INDEX < count($ANY_SITE_ALLOW_LIST) - 1
-                ? "URL.includes('$ANY_SITE_ALLOW_LIST[$INDEX]') || "
-                : "URL.includes('$ANY_SITE_ALLOW_LIST[$INDEX]')";
+                ? "URL_1.includes('$ANY_SITE_ALLOW_LIST[$INDEX]') || "
+                : "URL_1.includes('$ANY_SITE_ALLOW_LIST[$INDEX]')";
         }
         $TEXT_JS_SITE_DATA_ALL .= ")";
         // let DATA = [...]
