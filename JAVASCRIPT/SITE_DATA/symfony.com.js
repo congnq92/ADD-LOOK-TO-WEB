@@ -11,7 +11,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: '#ukraine-message,.doc-header-container,.doc-sidebar-highlight,.top-horizontal-highlights,#sln,.doc-content-embedded-sidebar,.doc-license,footer,',
+        SELECTOR_CSS_LIST_BY_COMMA: '#ukraine-message,.doc-header-container,.doc-sidebar-highlight,.top-horizontal-highlights,#sln,.doc-content-embedded-sidebar,.doc-license,footer',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
     {
