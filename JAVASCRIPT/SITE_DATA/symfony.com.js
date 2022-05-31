@@ -6,7 +6,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'code,pre,.codeblock,',
+        SELECTOR_CSS_LIST_BY_COMMA: 'code,pre,.codeblock',
         CLASS_LIST_BY_SPACE: 'CONG_CODE'
     },
     {
