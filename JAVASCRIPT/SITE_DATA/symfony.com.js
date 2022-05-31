@@ -2,7 +2,7 @@ DATA = [
     {
         TYPE: 'ADD_CLASS',
         SELECTOR_CSS_LIST_BY_COMMA: 'body',
-        CLASS_LIST_BY_SPACE: 'UPPER w3-white w3-text-black MARGIN_TOP_0 PADDING_TOP_0'
+        CLASS_LIST_BY_SPACE: 'UPPER w3-white w3-text-black MARGIN_TOP_0 PADDING_TOP_0 LINE_HEIGHT_130'
     },
     {
         TYPE: 'ADD_CLASS',
