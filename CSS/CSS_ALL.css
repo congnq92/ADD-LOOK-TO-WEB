@@ -26,9 +26,18 @@
     margin-top: 75px !important;
 }
 
+.MARGIN_TOP_0 {
+    margin-top: 0px !important;
+}
+
 .PADDING_0 {
     padding: 0 !important;
 }
+
+.PADDING_TOP_0 {
+    padding-top: 0 !important;
+}
+
 
 .PADDING_2_4 {
     padding: 2px 4px !important;
