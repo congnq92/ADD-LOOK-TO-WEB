@@ -44,5 +44,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: 'aio-nav-menu aio-nav-item,aio-toc li',
         CSS_TEXT: 'font-size: 0.7em !important; line-height: 1.3em !important;'
     },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.sidenav-content',
+        CSS_TEXT: 'padding: 50px 0 !important; margin: 0 25px !important; max-width: 2000px !important;'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
