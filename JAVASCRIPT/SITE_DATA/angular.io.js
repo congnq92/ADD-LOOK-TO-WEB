@@ -46,6 +46,11 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.toc-container',
+        CSS_TEXT: 'top: 40px !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.sidenav-content',
         CSS_TEXT: 'padding: 50px 0 !important; margin: 0 25px !important; max-width: 2000px !important;'
     },
