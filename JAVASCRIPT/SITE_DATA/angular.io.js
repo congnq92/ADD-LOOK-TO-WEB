@@ -31,8 +31,13 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'p,ol,ul,li,input,a,aio-nav-menu aio-nav-item',
+        SELECTOR_CSS_LIST_BY_COMMA: 'p,ol,ul,li,input,a',
         CSS_TEXT: 'font-size: 1em !important; line-height: 1.3em !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-nav-menu aio-nav-item,aio-toc li',
+        CSS_TEXT: 'font-size: 0.7em !important; line-height: 1.3em !important;'
     },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
