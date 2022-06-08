@@ -15,6 +15,11 @@ DATA = [
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
     {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'p',
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_160'
+    },
+    {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.mat-toolbar-row',
         CSS_TEXT: 'height: 1.5em !important;'
