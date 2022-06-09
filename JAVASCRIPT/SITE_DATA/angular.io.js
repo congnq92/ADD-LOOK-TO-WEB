@@ -77,7 +77,17 @@ DATA = [
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.selected',
-        CSS_TEXT: 'color: #f44336 !important;border: #2196F3 2px dotted !important; border-radius: 4px !important;'
+        CSS_TEXT: 'color: #f44336 !important;border: #2196F3 2px dotted !important; border-radius: 4px !important;margin-bottom: 2px !important;margin-top: 2px !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.active',
+        CSS_TEXT: 'border: #2196F3 2px dotted !important; border-radius: 4px !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.active a',
+        CSS_TEXT: 'color: #4CAF50 !important;'
     },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
