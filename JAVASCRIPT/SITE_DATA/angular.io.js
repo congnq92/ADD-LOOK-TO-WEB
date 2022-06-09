@@ -51,8 +51,13 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'aio-shell[ng-version=\'7.2.9\'] aio-nav-menu aio-nav-item a',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-shell[ng-version=\'7.2.9\'] aio-nav-menu aio-nav-item a,aio-shell[ng-version=\'7.2.9\'] aio-nav-menu aio-nav-item button',
         CLASS_LIST_BY_SPACE: 'UPPER'
+    },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-shell[ng-version=\'7.2.9\'] mat-sidenav.mat-sidenav.sidenav',
+        CSS_TEXT: 'width: 250px !important; min-width: 250px !important;'
     },
     {
         TYPE: 'ADD_CSS',
