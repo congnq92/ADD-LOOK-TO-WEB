@@ -81,6 +81,11 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.level-3.expanded.selected',
+        CSS_TEXT: 'font-weight: 600 !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.active',
         CSS_TEXT: 'border: #2196F3 2px dotted !important; border-radius: 4px !important;'
     },
