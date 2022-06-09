@@ -94,5 +94,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: '.active a',
         CSS_TEXT: 'color: #4CAF50 !important;'
     },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'th',
+        CSS_TEXT: 'word-wrap: break-word;'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
