@@ -46,6 +46,21 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-shell[ng-version=\'7.2.9\'] aio-nav-menu aio-nav-item',
+        CSS_TEXT: 'font-size: 1.2em !important;'
+    },
+    {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-shell[ng-version=\'7.2.9\'] aio-nav-menu aio-nav-item a',
+        CLASS_LIST_BY_SPACE: 'UPPER'
+    },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'aio-toc[ng-version=\'7.2.9\'] li',
+        CSS_TEXT: 'font-size: 1.2em !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.toc-container',
         CSS_TEXT: 'top: 40px !important;'
     },
