@@ -74,5 +74,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: '.sidenav-content',
         CSS_TEXT: 'padding: 50px 0 !important; margin: 0 25px !important; max-width: 2000px !important;'
     },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.selected',
+        CSS_TEXT: 'color: #f44336 !important;border: #2196F3 2px dotted !important; border-radius: 4px !important;'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
