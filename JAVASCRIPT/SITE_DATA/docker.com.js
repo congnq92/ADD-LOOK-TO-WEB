@@ -14,5 +14,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: '.col-content.content',
         CLASS_LIST_BY_SPACE: 'w3-large'
     },
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '#sidebar-nav',
+        CSS_TEXT: 'max-height: fit-content !important;'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
