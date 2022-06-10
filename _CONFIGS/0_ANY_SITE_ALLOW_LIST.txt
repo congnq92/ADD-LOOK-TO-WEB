@@ -3,3 +3,4 @@ stackoverflow
 stackexchange
 guru99
 php.net
+typescriptlang.org
