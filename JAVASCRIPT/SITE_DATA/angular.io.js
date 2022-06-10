@@ -82,7 +82,7 @@ DATA = [
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.level-3.expanded.selected',
-        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;'
+        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;'
     },
     {
         TYPE: 'ADD_CSS',
