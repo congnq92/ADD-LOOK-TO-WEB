@@ -70,6 +70,12 @@
 .LINE_HEIGHT_160 {
     line-height: 1.6 !important;
 }
+/*OVERRIDE SITE CSS OF ACTIVE, SELECTED*/
+.seleted, .active {
+    color: #2196F3 !important;
+    border: 1px solid #2196F3 !important;
+}
+
 /*W3.CSS_____________________________________________________*/
 /**/
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
