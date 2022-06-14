@@ -6,7 +6,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'code,pre,.torchlight,#collection-method-list,.collection-method-list',
+        SELECTOR_CSS_LIST_BY_COMMA: 'code,pre,.torchlight,#collection-method-list,.collection-method-list,[id^=rule]',
         CLASS_LIST_BY_SPACE: 'CONG_CODE'
     },
     {
