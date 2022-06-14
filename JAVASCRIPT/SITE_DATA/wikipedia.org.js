@@ -4,6 +4,11 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: 'body',
         CLASS_LIST_BY_SPACE: 'UPPER w3-white TEXT_SIZE_130'
     },
+    {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'code,pre,.mw-highlight',
+        CLASS_LIST_BY_SPACE: 'CONG_CODE'
+    },
     // HIDE LEFT BAR
     {
         TYPE: 'ADD_CLASS',
