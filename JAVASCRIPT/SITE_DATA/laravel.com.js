@@ -22,7 +22,7 @@ DATA = [
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.docs_main',
-        CSS_TEXT: 'max-width: 100% !important;'
+        CSS_TEXT: 'max-width: 115ch !important;'
     },
     {
         TYPE: 'ADD_CLASS',
