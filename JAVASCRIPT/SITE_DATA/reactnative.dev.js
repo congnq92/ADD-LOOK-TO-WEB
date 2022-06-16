@@ -11,7 +11,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'footer',
+        SELECTOR_CSS_LIST_BY_COMMA: 'footer,.docsRating',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
     {
@@ -22,12 +22,12 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
-        SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active a',
+        SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active',
         CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important;'
     },
     {
         TYPE: 'ADD_CSS',
-        SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active a',
+        SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active',
         CSS_TEXT: 'color: #4CAF50 !important;'
     },
     {EMPTY_LINE: 'EMPTY_LINE'}
