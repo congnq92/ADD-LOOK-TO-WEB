@@ -24,13 +24,12 @@ DATA = [
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.menu__list-item-collapsible>.menu__link--active',
-        CSS_TEXT: 'border-radius: 0px !important; border-bottom: 0px !important; border-top: 1px dashed #2196F3 !important; border-left: 1px dashed #2196F3 !important; border-right: 1px dashed #2196F3 !important;'
+        CSS_TEXT: 'border-radius: 0px !important; border-bottom: 0px !important; border-top: 1px dashed #2196F3 !important; border-left: 1px dashed #2196F3 !important; border-right: 1px dashed #2196F3 !important; color: #2196F3 !important;'
     },
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.menu__link--active',
-        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;     color: #2196F3 !important;\n' +
-            '    background: #fff !important;'
+        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important; color: #2196F3 !important; background: #fff !important;'
     },
     {
         TYPE: 'ADD_CSS',
