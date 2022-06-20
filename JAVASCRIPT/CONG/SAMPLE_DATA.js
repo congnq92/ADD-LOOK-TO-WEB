@@ -25,7 +25,7 @@ DATA = [
         TYPE: 'ADD_CLASS_TO_OBJECT',
         SELECTOR_CSS: 'body',
         CLASS_LIST_BY_SPACE: 'CLASS_X',
-        PARENT_LEVEL: 1,
+        PARENT_LEVEL: 0, // DEFAULT NO PARENT LEVEL
     },
     //       USING MORE ADD_CSS WITH CLASS ABOVE .CLASS_X
     //
