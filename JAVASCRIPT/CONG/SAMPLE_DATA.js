@@ -20,5 +20,14 @@ DATA = [
         TYPE: 'CLICK',
         SELECTOR_CSS_LIST_BY_COMMA: '#left-col-scrollbar-container li'
     },
+    // DIFFICULTY HIGH: ADD CLASS TO OBJECT | SAMPLE CLASS_X
+    {
+        TYPE: 'ADD_CLASS_TO_OBJECT',
+        SELECTOR_CSS: 'body',
+        CLASS_LIST_BY_SPACE: 'CLASS_X',
+        PARENT_LEVEL: 1,
+    },
+    //       USING MORE ADD_CSS WITH CLASS ABOVE .CLASS_X
+    //
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];

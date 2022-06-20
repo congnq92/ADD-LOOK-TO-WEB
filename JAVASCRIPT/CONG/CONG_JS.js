@@ -13,6 +13,11 @@ function SELECT_ALL(SELECTOR_CSS) {
     return document.querySelectorAll(SELECTOR_CSS);
 }
 
+// RETURN OBJECT
+function PARENT(OBJECT) {
+    return OBJECT.parentElement;
+}
+
 // gitcdn.link | GITHUB RAW CDN OF THIS PROJECT
 /*
 *   gitcdn.link | GITHUB RAW CDN OF THIS PROJECT
@@ -70,6 +75,19 @@ function ADD_CSS(SELECTOR_CSS_LIST_BY_COMMA, CSS_TEXT) {
     }
 }
 
+function ADD_CLASS_TO_OBJECT(SELECTOR_CSS, CLASS_LIST_BY_SPACE, PARENT_LEVEL = 1) {
+    let OBJECT = SELECT(SELECTOR_CSS);
+    for (let INDEX = 0; INDEX < PARENT_LEVEL; INDEX++) {
+        OBJECT = PARENT(OBJECT);
+    }
+    if (!OBJECT.className.includes(CLASS_LIST_BY_SPACE)) {
+        OBJECT.className += ' ' + CLASS_LIST_BY_SPACE;
+        OBJECT.onclick = function () {
+            RENDER();
+        };
+    }
+}
+
 function ADD_CSS_TAG(CSS_TEXT) {
     const STYLE = document.createElement("style");
     STYLE.appendChild(document.createTextNode(CSS_TEXT));
@@ -106,7 +124,8 @@ function CLICK_FIRST_TIME(SELECTOR_CSS_LIST_BY_COMMA) {
             console.log("After page loaded " + (StartSeconds / 1000) + " seconds: Click " + LIST_SELECTOR_CSS[INDEX_0]);
             // DO WORK
             SELECT(LIST_SELECTOR_CSS[INDEX_0]).click(); /*TEST stuff comment last*/
-            /*TEST stuff comment first*/}, StartSeconds);
+            /*TEST stuff comment first*/
+        }, StartSeconds);
     }
     // END 1 HERE | NORMAL END
 }
@@ -135,6 +154,8 @@ function RENDER() {
             ADD_CSS(DATA[INDEX].SELECTOR_CSS_LIST_BY_COMMA, DATA[INDEX].CSS_TEXT);
         if (DATA[INDEX].TYPE === 'CLICK')
             CLICK_FIRST_TIME(DATA[INDEX].SELECTOR_CSS_LIST_BY_COMMA);
+        if (DATA[INDEX].TYPE === 'ADD_CLASS_TO_OBJECT')
+            ADD_CLASS_TO_OBJECT(DATA[INDEX].SELECTOR_CSS, DATA[INDEX].CLASS_LIST_BY_SPACE, DATA[INDEX].PARENT_LEVEL);
     }
 } // END RENDER
 RENDER();

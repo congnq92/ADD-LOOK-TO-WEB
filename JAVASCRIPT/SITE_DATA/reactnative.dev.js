@@ -20,6 +20,13 @@ DATA = [
         CLASS_PART_LIST_BY_COMMA: 'announcementBar',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
+    // LEVEL 0
+    {
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.menu__list-item-collapsible>.menu__link--active',
+        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;'
+    },
+// LEVEL 2
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.menu__link--active',
