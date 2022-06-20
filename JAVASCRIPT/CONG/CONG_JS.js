@@ -82,7 +82,7 @@ function ADD_CLASS_TO_OBJECT(SELECTOR_CSS, CLASS_LIST_BY_SPACE, PARENT_LEVEL = 0
         OBJECT = PARENT(OBJECT);
     }
     // VALIDATE ITEM
-   let OBJECT_OLD = MAP_OBJECT_SAVED.get(SELECTOR_CSS);
+   let OBJECT_OLD = MAP_OBJECT_SAVED.has(SELECTOR_CSS) ? MAP_OBJECT_SAVED.get(SELECTOR_CSS) : null;
     if( JSON.stringify(OBJECT_OLD) === JSON.stringify(OBJECT) ){
         console.log("SAME");
     }else{
