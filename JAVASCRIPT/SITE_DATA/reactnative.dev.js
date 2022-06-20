@@ -36,7 +36,7 @@ DATA = [
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active',
-        CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important; padding: 4px !important;'
+        CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important;'
     },
     {
         TYPE: 'ADD_CSS',
