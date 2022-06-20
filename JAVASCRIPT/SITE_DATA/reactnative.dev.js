@@ -20,23 +20,15 @@ DATA = [
         CLASS_PART_LIST_BY_COMMA: 'announcementBar',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
-    // LEVEL 0
     {
-        TYPE: 'ADD_CLASS_TO_OBJECT',
-        SELECTOR_CSS: '.menu__list-item-collapsible>.menu__link--active',
-        CLASS_LIST_BY_SPACE: 'w3-border w3-border-blue',
-        PARENT_LEVEL: 2, // DEFAULT NO PARENT LEVEL
+        TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.menu__link--active',
+        CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;'
     },
-    // LEVEL 2
-    // {
-    //     TYPE: 'ADD_CSS',
-    //     SELECTOR_CSS_LIST_BY_COMMA: '.menu__link--active',
-    //     CSS_TEXT: 'font-weight: 600 !important; border: #2196F3 1px solid !important;border-top-left-radius: 0px !important; border-bottom-left-radius: 0px !important; border-top-right-radius: 7px !important; border-bottom-right-radius: 7px !important; border-right: #2196F3 7px solid !important;'
-    // },
     {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active',
-        CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important;'
+        CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important; padding: 4px !important;'
     },
     {
         TYPE: 'ADD_CSS',
