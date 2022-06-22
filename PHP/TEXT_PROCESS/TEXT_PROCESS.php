@@ -60,7 +60,7 @@ class TEXT_PROCESS extends BASE
         array_shift($LIST_SITE_DATA_FILE_NAMES); // REMOVE ANY SITE ITEM | 1ST
         // CASE: DOMAIN DETECT
         foreach ($LIST_SITE_DATA_FILE_NAMES as $SITE_DATA_FILE_NAME) {
-            $SITE_DATA_DOMAIN_DETECT = str_replace(".js", "", $SITE_DATA_FILE_NAME);
+            $SITE_DATA_DOMAIN_DETECT = substr($SITE_DATA_FILE_NAME, 0, strlen($SITE_DATA_FILE_NAME) - 3);
             $TEXT_JS_SITE_DATA_ALL .= "if(URL_1.includes('$SITE_DATA_DOMAIN_DETECT'))";
             // let DATA = [...]
             $SITE_DATA_TEXT_JS = $this->READ_FILE(sprintf("%s/%s", PATH_FOLDER_JAVASCRIPT_SITE_DATA, $SITE_DATA_FILE_NAME));
