@@ -46,5 +46,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: '.table-of-contents__link--active',
         CSS_TEXT: 'color: #4CAF50 !important;'
     },
+    {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.theme-doc-markdown',
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_150'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
