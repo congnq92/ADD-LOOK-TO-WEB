@@ -21,6 +21,7 @@ class VERSION extends BASE
      */
     public function __construct()
     {
+        $this->READ_MAJOR();
         $this->READ();
     }
 
@@ -35,11 +36,27 @@ class VERSION extends BASE
         $VERSION_DATA_OBJ = json_decode($this->READ_FILE(__DIR__ . "/VERSION.json"));
         // VALIDATE & PROCESS
         if(!is_null($VERSION_DATA_OBJ)){
-            $this->MAJOR = $VERSION_DATA_OBJ->MAJOR;
             $this->MINOR = $VERSION_DATA_OBJ->MINOR;
             $this->PATCH = $VERSION_DATA_OBJ->PATCH;
         }
         return $this;
+    }
+
+    /**
+     * READ DATA FROM _MAJOR_MAIN_LOG.MD
+     * @param none
+     * @return int
+     */
+    public function READ_MAJOR()
+    {
+        // READ DATA
+        $MAJOR_DATA = json_decode($this->READ_FILE(__DIR__ . "/_MAJOR_MAIN_LOG.MD"));
+        var_dump($MAJOR_DATA);
+        // VALIDATE & PROCESS
+        if(!is_null($MAJOR_DATA)){
+            $this->MAJOR = 1;
+        }
+        return 0;
     }
 
     /**
