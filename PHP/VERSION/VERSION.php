@@ -26,6 +26,22 @@ class VERSION extends BASE
     }
 
     /**
+     * READ DATA FROM _MAJOR_MAIN_LOG.MD
+     * @param none
+     * @return int
+     */
+    public function READ_MAJOR()
+    {
+        // READ DATA
+        $MAJOR_DATA = $this->READ_FILE(__DIR__ . "/_MAJOR_MAIN_LOG.MD");
+        // VALIDATE & PROCESS
+        if (!is_null($MAJOR_DATA)) {
+            $this->MAJOR = count(explode(PHP_EOL, $MAJOR_DATA)) - 1;
+        }
+        return 0;
+    }
+
+    /**
      * READ DATA FROM VERSION.json
      * @param none
      * @return VERSION
@@ -35,28 +51,11 @@ class VERSION extends BASE
         // READ DATA
         $VERSION_DATA_OBJ = json_decode($this->READ_FILE(__DIR__ . "/VERSION.json"));
         // VALIDATE & PROCESS
-        if(!is_null($VERSION_DATA_OBJ)){
+        if (!is_null($VERSION_DATA_OBJ)) {
             $this->MINOR = $VERSION_DATA_OBJ->MINOR;
             $this->PATCH = $VERSION_DATA_OBJ->PATCH;
         }
         return $this;
-    }
-
-    /**
-     * READ DATA FROM _MAJOR_MAIN_LOG.MD
-     * @param none
-     * @return int
-     */
-    public function READ_MAJOR()
-    {
-        // READ DATA
-        $MAJOR_DATA = json_decode($this->READ_FILE(__DIR__ . "/_MAJOR_MAIN_LOG.MD"));
-        var_dump($MAJOR_DATA);
-        // VALIDATE & PROCESS
-        if(!is_null($MAJOR_DATA)){
-            $this->MAJOR = 1;
-        }
-        return 0;
     }
 
     /**
@@ -123,17 +122,6 @@ class VERSION extends BASE
     }
 
     /**
-     * SAVE DATA TO VERSION.json
-     * @param none
-     * @return VERSION
-     */
-    public function SAVE()
-    {
-        $this->WRITE_FILE(__DIR__ . "/VERSION.json", json_encode(get_object_vars($this)));
-        return $this;
-    }
-
-    /**
      * @param none
      * @return VERSION
      */
@@ -141,6 +129,17 @@ class VERSION extends BASE
     {
         $this->MINOR++;
         $this->SAVE();
+        return $this;
+    }
+
+    /**
+     * SAVE DATA TO VERSION.json
+     * @param none
+     * @return VERSION
+     */
+    public function SAVE()
+    {
+        $this->WRITE_FILE(__DIR__ . "/VERSION.json", json_encode(get_object_vars($this)));
         return $this;
     }
 }
