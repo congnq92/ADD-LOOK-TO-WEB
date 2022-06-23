@@ -16,6 +16,11 @@ DATA = [
     },
     {
         TYPE: 'ADD_CSS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'header>div:nth-child(2),header>div:nth-child(2)>div:first-child',
+        CSS_TEXT: 'height: 33px !important;'
+    },
+    {
+        TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: 'nav li a[aria-current=\'page\']',
         CSS_TEXT: 'border: #2196F3 1px solid !important; border-top-left-radius: 7px !important; border-bottom-left-radius: 7px !important; margin-left: -5px; border-left: #2196F3 7px solid !important; padding: 4px !important;'
     },
