@@ -32,7 +32,7 @@ DATA = [
     {
         TYPE: 'ADD_CLASS',
         SELECTOR_CSS_LIST_BY_COMMA: 'article p',
-        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_140'
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_130'
     },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
