@@ -75,27 +75,27 @@ function ADD_CSS(SELECTOR_CSS_LIST_BY_COMMA, CSS_TEXT) {
     }
 }
 
-let MAP_OBJECT_SAVED = new Map();
+// let MAP_OBJECT_SAVED = new Map();
 function ADD_CLASS_TO_OBJECT(SELECTOR_CSS, CLASS_LIST_BY_SPACE, PARENT_LEVEL = 0) {
     let OBJECT = SELECT(SELECTOR_CSS);
     for (let INDEX = 0; INDEX < PARENT_LEVEL; INDEX++) {
         OBJECT = PARENT(OBJECT);
     }
-    // VALIDATE ITEM
-   let OBJECT_OLD = MAP_OBJECT_SAVED.has(SELECTOR_CSS) ? MAP_OBJECT_SAVED.get(SELECTOR_CSS) : null;
-    if( JSON.stringify(OBJECT_OLD) === JSON.stringify(OBJECT) ){
-        console.log("SAME");
-    }else{
-        console.log("DIFFER");
-    }
+   //  // VALIDATE ITEM
+   // let OBJECT_OLD = MAP_OBJECT_SAVED.has(SELECTOR_CSS) ? MAP_OBJECT_SAVED.get(SELECTOR_CSS) : null;
+   //  if( JSON.stringify(OBJECT_OLD) === JSON.stringify(OBJECT) ){
+   //      console.log("SAME");
+   //  }else{
+   //      console.log("DIFFER");
+   //  }
     // PROCESS
     if (!OBJECT.className.includes(CLASS_LIST_BY_SPACE)) {
         OBJECT.className += ' ' + CLASS_LIST_BY_SPACE;
         OBJECT.onclick = function () {
             RENDER();
         };
-        // SAVE TO MAP SAVED
-        MAP_OBJECT_SAVED.set(SELECTOR_CSS, OBJECT);
+        // // SAVE TO MAP SAVED
+        // MAP_OBJECT_SAVED.set(SELECTOR_CSS, OBJECT);
     }
 }
 

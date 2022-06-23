@@ -34,5 +34,11 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: 'article p',
         CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_130'
     },
+    {
+        TYPE: 'ADD_CLASS_TO_OBJECT',
+        SELECTOR_CSS: 'article',
+        CLASS_LIST_BY_SPACE: 'MARGIN_0_15',
+        PARENT_LEVEL: 2, // DEFAULT NO PARENT LEVEL
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
