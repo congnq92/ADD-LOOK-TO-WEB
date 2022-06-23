@@ -128,6 +128,18 @@ class VERSION extends BASE
     public function ADD_MINOR()
     {
         $this->MINOR++;
+        $this->PATCH = 0; // RESET
+        $this->SAVE();
+        return $this;
+    }
+
+    /**
+     * @param none
+     * @return VERSION
+     */
+    public function ADD_PATCH()
+    {
+        $this->PATCH++;
         $this->SAVE();
         return $this;
     }
