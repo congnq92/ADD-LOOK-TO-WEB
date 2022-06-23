@@ -1,0 +1,25 @@
+# VERSIONING
+source: https://reactjs.org/docs/faq-versioning.html
+
+THAT MEANS THAT WITH A **VERSION NUMBER X.Y.Z**:
+
+WHEN RELEASING CRITICAL BUG FIXES, WE MAKE A **PATCH RELEASE BY CHANGING THE Z NUMBER** (EX: 15.6.2 TO 15.6.3).
+WHEN RELEASING NEW FEATURES OR NON-CRITICAL FIXES, WE MAKE A **MINOR RELEASE BY CHANGING THE Y NUMBER** (EX: 15.6.2 TO 15.7.0).
+WHEN RELEASING BREAKING CHANGES, WE MAKE A **MAJOR RELEASE BY CHANGING THE X NUMBER** (EX: 15.6.2 TO 16.0.0).
+MAJOR RELEASES CAN ALSO CONTAIN NEW FEATURES, AND ANY RELEASE CAN INCLUDE BUG FIXES.
+
+**MINOR RELEASES ARE THE MOST COMMON** TYPE OF RELEASE.
+
+VERSION RELEASE:
+- **MAJOR** | MAIN: **BREAKING CHANGES**.
+- **MINOR** | MINI: **NEW FEATURES** OR **NON-CRITICAL FIXES** | **NEW FUNCTIONALITY** OR **IMPROVEMENTS**.
+- **PATCH** :  **CRITICAL BUG FIXES**. | ??URGENT
+
+---
+# Semantic Versioning 2.0.0
+source: https://semver.org/
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards compatible manner, and
+3. PATCH version when you make backwards compatible bug fixes.

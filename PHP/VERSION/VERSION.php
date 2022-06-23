@@ -7,10 +7,13 @@ use BASE;
 class VERSION extends BASE
 {
     /** @var int */
-    protected $MAIN;
+    protected $MAJOR = 0; // default
 
     /** @var int */
-    protected $REVISION;
+    protected $MINOR = 0; // default
+
+    /** @var int */
+    protected $PATCH = 0; // default
 
     /**
      * @param none
@@ -28,9 +31,14 @@ class VERSION extends BASE
      */
     public function READ()
     {
+        // READ DATA
         $VERSION_DATA_OBJ = json_decode($this->READ_FILE(__DIR__ . "/VERSION.json"));
-        $this->MAIN = $VERSION_DATA_OBJ->MAIN;
-        $this->REVISION = $VERSION_DATA_OBJ->REVISION;
+        // VALIDATE & PROCESS
+        if(!is_null($VERSION_DATA_OBJ)){
+            $this->MAJOR = $VERSION_DATA_OBJ->MAJOR;
+            $this->MINOR = $VERSION_DATA_OBJ->MINOR;
+            $this->PATCH = $VERSION_DATA_OBJ->PATCH;
+        }
         return $this;
     }
 
@@ -40,53 +48,60 @@ class VERSION extends BASE
      */
     public function __toString()
     {
-        return sprintf("%s.%s", $this->getMAIN(), $this->REVISION);
+        return sprintf("%s.%s.%s", $this->MAJOR, $this->MINOR, $this->PATCH);
     }
 
     /**
      * @return mixed
      */
-    public function getMAIN()
+    public function getMAJOR()
     {
-        return $this->MAIN;
+        return $this->MAJOR;
     }
 
     /**
-     * @param mixed $MAIN
+     * @param mixed $MAJOR
      * @return VERSION
      */
-    public function setMAIN($MAIN): VERSION
+    public function setMAJOR($MAJOR): VERSION
     {
-        $this->MAIN = $MAIN;
+        $this->MAJOR = $MAJOR;
         return $this;
     }
 
     /**
      * @return int
      */
-    public function getREVISION(): int
+    public function getMINOR(): int
     {
-        return $this->REVISION;
+        return $this->MINOR;
     }
 
     /**
-     * @param int $REVISION
+     * @param int $MINOR
      * @return VERSION
      */
-    public function setREVISION($REVISION): VERSION
+    public function setMINOR($MINOR): VERSION
     {
-        $this->REVISION = $REVISION;
+        $this->MINOR = $MINOR;
         return $this;
     }
 
     /**
-     * @param none
+     * @return int
+     */
+    public function getPATCH(): int
+    {
+        return $this->PATCH;
+    }
+
+    /**
+     * @param int $PATCH
      * @return VERSION
      */
-    public function INCREASE_MAIN(): VERSION
+    public function setPATCH(int $PATCH): VERSION
     {
-        $this->MAIN++;
-        $this->SAVE();
+        $this->PATCH = $PATCH;
         return $this;
     }
 
@@ -105,9 +120,9 @@ class VERSION extends BASE
      * @param none
      * @return VERSION
      */
-    public function INCREASE_REVISION()
+    public function ADD_MINOR()
     {
-        $this->REVISION++;
+        $this->MINOR++;
         $this->SAVE();
         return $this;
     }
