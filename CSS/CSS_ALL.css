@@ -83,6 +83,10 @@
     line-height: 2 !important;
 }
 
+.MAX_WIDTH_100 {
+    max-width: 100% !important;
+}
+
 /*OVERRIDE SITE CSS OF ACTIVE, SELECTED*/
 .seleted, .active {
     color: #2196F3 !important;
