@@ -29,5 +29,10 @@ DATA = [
         SELECTOR_CSS_LIST_BY_COMMA: 'nav li a[aria-current=\'page\']',
         CSS_TEXT: 'color: #4CAF50 !important;'
     },
+    {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: 'article p',
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_140'
+    },
     {EMPTY_LINE: 'EMPTY_LINE'}
 ];
