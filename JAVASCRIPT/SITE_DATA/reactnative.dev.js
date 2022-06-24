@@ -11,7 +11,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: 'footer,.docsRating',
+        SELECTOR_CSS_LIST_BY_COMMA: 'footer,.docsRating,.theme-doc-version-banner',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
     {
