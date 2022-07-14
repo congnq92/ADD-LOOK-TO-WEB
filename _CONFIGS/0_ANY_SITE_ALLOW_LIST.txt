@@ -7,3 +7,4 @@ typescriptlang.org
 sass-lang.com
 vuejs.org
 developer.mozilla.org
+rxjs.dev
