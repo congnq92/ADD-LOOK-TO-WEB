@@ -1,0 +1,4 @@
+SITE DOMAIN DETECT | 1 SITE PER 1 LINE | START CALC FROM LINE 2ND
+localhost
+127.0.0.1
+engageplus.io

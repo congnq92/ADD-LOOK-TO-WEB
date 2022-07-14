@@ -56,6 +56,7 @@ class TEXT_PROCESS extends BASE
         //
         $TEXT_JS_SITE_DATA_ALL .= "let URL_1 = window.location.href;\n";
         $TEXT_JS_SITE_DATA_ALL .= "let DATA = [];\n";
+        $TEXT_JS_SITE_DATA_ALL .= "let IS_DEVELOP = false;\n";
         $LIST_SITE_DATA_FILE_NAMES = $this->LIST_FILES_IN_FOLDER(PATH_FOLDER_JAVASCRIPT_SITE_DATA);
         array_shift($LIST_SITE_DATA_FILE_NAMES); // REMOVE ANY SITE ITEM | 1ST
         // CASE: DOMAIN DETECT
@@ -80,6 +81,15 @@ class TEXT_PROCESS extends BASE
         $ANY_SITE_DATA_TEXT_JS = $this->READ_FILE(sprintf("%s/%s", PATH_FOLDER_JAVASCRIPT_SITE_DATA, FILE_0_ANY_SITE_TEXT_JS));
         $TEXT_CONSOLE_LOG = sprintf("console.log('DATA=%s');", FILE_0_ANY_SITE_TEXT_JS);
         $TEXT_JS_SITE_DATA_ALL .= sprintf("{\n%s\n%s\n}\n", $ANY_SITE_DATA_TEXT_JS, $TEXT_CONSOLE_LOG);
+        // CASE: DEVELOP SITE
+        $TEXT_JS_SITE_DATA_ALL .= "if(";
+        $DEVELOP_SITE_LIST = $this->READ_CONFIGS_DEVELOP_SITE_LIST();
+        for ($INDEX = 0; $INDEX < count($DEVELOP_SITE_LIST); $INDEX++) {
+            $TEXT_JS_SITE_DATA_ALL .= $INDEX < count($DEVELOP_SITE_LIST) - 1
+                ? "URL_1.includes('$DEVELOP_SITE_LIST[$INDEX]') || "
+                : "URL_1.includes('$DEVELOP_SITE_LIST[$INDEX]')";
+        }
+        $TEXT_JS_SITE_DATA_ALL .= "){ IS_DEVELOP = true; }";
         //
         $TEXT_JS_SITE_DATA_ALL .= "// PART: SITE DATA | END\n\n";
         return $TEXT_JS_SITE_DATA_ALL;
@@ -95,6 +105,18 @@ class TEXT_PROCESS extends BASE
         $ANY_SITE_ALLOW_LIST = explode(PHP_EOL, $ANY_SITE_ALLOW_LIST_TEXT);
         array_shift($ANY_SITE_ALLOW_LIST); // REMOVE INSTRUCTION LINE
         return $ANY_SITE_ALLOW_LIST;
+    }
+
+    /**
+     * @param none
+     * @return array
+     */
+    public function READ_CONFIGS_DEVELOP_SITE_LIST(): array
+    {
+        $DEVELOP_SITE_LIST_TEXT = $this->READ_FILE($this->GET_PROJECT_FOLDER(sprintf("%s/%s", PATH_FOLDER_CONFIGS, FILE_1_DEVELOP_SITE_LIST)));
+        $DEVELOP_SITE_LIST = explode(PHP_EOL, $DEVELOP_SITE_LIST_TEXT);
+        array_shift($DEVELOP_SITE_LIST); // REMOVE INSTRUCTION LINE
+        return $DEVELOP_SITE_LIST;
     }
 
     /**

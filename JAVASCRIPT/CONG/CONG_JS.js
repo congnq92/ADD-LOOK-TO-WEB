@@ -81,13 +81,13 @@ function ADD_CLASS_TO_OBJECT(SELECTOR_CSS, CLASS_LIST_BY_SPACE, PARENT_LEVEL = 0
     for (let INDEX = 0; INDEX < PARENT_LEVEL; INDEX++) {
         OBJECT = PARENT(OBJECT);
     }
-   //  // VALIDATE ITEM
-   // let OBJECT_OLD = MAP_OBJECT_SAVED.has(SELECTOR_CSS) ? MAP_OBJECT_SAVED.get(SELECTOR_CSS) : null;
-   //  if( JSON.stringify(OBJECT_OLD) === JSON.stringify(OBJECT) ){
-   //      console.log("SAME");
-   //  }else{
-   //      console.log("DIFFER");
-   //  }
+    //  // VALIDATE ITEM
+    // let OBJECT_OLD = MAP_OBJECT_SAVED.has(SELECTOR_CSS) ? MAP_OBJECT_SAVED.get(SELECTOR_CSS) : null;
+    //  if( JSON.stringify(OBJECT_OLD) === JSON.stringify(OBJECT) ){
+    //      console.log("SAME");
+    //  }else{
+    //      console.log("DIFFER");
+    //  }
     // PROCESS
     if (!OBJECT.className.includes(CLASS_LIST_BY_SPACE)) {
         OBJECT.className += ' ' + CLASS_LIST_BY_SPACE;
@@ -148,6 +148,9 @@ function IS_NO_SITE() {
 // START CALC
 function RENDER() {
     // VALIDATE
+    if (IS_DEVELOP) {
+        return; // END | silent
+    }
     if (IS_NO_SITE()) {
         console.log('NOT IN SITE LISTING | NO WORK.');
         return; // END
@@ -169,7 +172,14 @@ function RENDER() {
             ADD_CLASS_TO_OBJECT(DATA[INDEX].SELECTOR_CSS, DATA[INDEX].CLASS_LIST_BY_SPACE, DATA[INDEX].PARENT_LEVEL);
     }
 } // END RENDER
-RENDER();
+//
+if (IS_DEVELOP) {
+    // CASE: DEVELOP
+    console.log('DETECT DEVELOP SITE | NO WORK.');
+} else {
+    // CASE: NORMAL
+    RENDER();
+}
 // SMOOTH RENDER
 SELECT('body').onclick = function () {
     RENDER();
