@@ -11,7 +11,7 @@ DATA = [
     },
     {
         TYPE: 'ADD_CLASS',
-        SELECTOR_CSS_LIST_BY_COMMA: '.header,.header__additional-message,.footer',
+        SELECTOR_CSS_LIST_BY_COMMA: '.header,.header__additional-message,.footer,.news__con',
         CLASS_LIST_BY_SPACE: 'HIDE'
     },
     {
