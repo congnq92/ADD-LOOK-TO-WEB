@@ -55,6 +55,14 @@
     font-size: 130% !important;
 }
 
+.TEXT_SIZE_15_PX {
+    font-size: 15px !important;
+}
+
+.TEXT_SIZE_18_PX {
+    font-size: 18px !important;
+}
+
 .LINE_HEIGHT_0 {
     line-height: 0 !important;
 }

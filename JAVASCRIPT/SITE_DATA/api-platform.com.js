@@ -25,6 +25,16 @@ DATA = [
         CLASS_LIST_BY_SPACE: 'PADDING_0'
     },
     {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.docs__content p',
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_150,TEXT_SIZE_18_PX'
+    },
+    {
+        TYPE: 'ADD_CLASS',
+        SELECTOR_CSS_LIST_BY_COMMA: '.docs__menu .menu__item .menu-item__link,.docs__menu .menu__item .submenu-item__link,.docs__menu .menu__item .item__title h2,.docs__menu .menu__item.open h2',
+        CLASS_LIST_BY_SPACE: 'TEXT_SIZE_15_PX'
+    },
+    {
         TYPE: 'ADD_CSS',
         SELECTOR_CSS_LIST_BY_COMMA: '.docs__nav',
         CSS_TEXT: 'width: 80% !important; background: #fff; box-shadow: none;'
