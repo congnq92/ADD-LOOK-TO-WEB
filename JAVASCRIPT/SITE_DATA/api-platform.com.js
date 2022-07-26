@@ -27,7 +27,7 @@ DATA = [
     {
         TYPE: 'ADD_CLASS',
         SELECTOR_CSS_LIST_BY_COMMA: '.docs__content p',
-        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_150,TEXT_SIZE_18_PX'
+        CLASS_LIST_BY_SPACE: 'LINE_HEIGHT_150 TEXT_SIZE_18_PX'
     },
     {
         TYPE: 'ADD_CLASS',
